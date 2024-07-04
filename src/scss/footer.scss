@@ -1,0 +1,68 @@
+@import 'variables.scss';
+
+.footer {
+
+  &_margin {
+    @media (min-width: $screen-xl) {
+      margin-left: 307px;
+    }
+  }
+  
+  &__position {
+    margin: 62px 0 19px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    border-top: 1px solid #D9FFF5;
+
+    @media (min-width: $screen-md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-left: 24px;
+      margin-right: 24px;
+      text-align: start;
+      padding-top: 12px;
+      align-items: start;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin: 68px 33px 19px 27px;
+    }
+  }
+}
+
+.footer-block {
+  &__text {
+    font-size: 14px;
+    color: $text-gray;
+    background-color: $bg-color;
+
+    &_align {
+      text-align: center;
+
+      @media (min-width: $screen-md) {
+        text-align: end;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 340px;
+      }
+    }
+  }
+
+  &__button {
+    font-size: 14px;
+    color: $text-gray;
+    background-color: $bg-color;
+
+    @media (min-width: $screen-xl) {
+      text-align: start;
+    }
+
+    &:hover {
+      cursor: pointer;
+      text-shadow: 0 0 5px rgb(140, 137, 165);
+    }
+  }
+}

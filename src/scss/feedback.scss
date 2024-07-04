@@ -1,0 +1,142 @@
+@import 'variables.scss';
+
+.feedback {
+  display: none;
+  width: 320px;
+  height: 676px;
+  background-color: $bg-color-white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-shadow: 25px 0 50px 0 #000000;
+  position: absolute;
+  z-index: 30;
+
+  @media (min-width: $screen-xl) {
+    width: 440px;
+    min-height: 1927px;
+  }
+
+  &_open {
+    display: block;
+  }
+
+  &__button {
+    margin: 24px 0 21px 16px;
+
+    @media (min-width: $screen-xl) {
+      position: absolute;
+      right: 473px;
+      top: 9px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    color: $text-black;
+    font-weight: bold;
+    margin-bottom: 24px;
+    letter-spacing: -0.2px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 28px;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 37px;
+      background-color: #41F6D7;
+      position: relative;
+      margin-right: 12px;
+      border-radius: $border-radius;
+      position: relative;
+      top: 6px;
+
+      @media (min-width: $screen-xl) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__name {
+    padding: 12px 98px 12px 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: $border-radius;
+    margin-left: 16px;
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-xl) {
+      padding-right: 186px;
+      margin-left: 32px;
+    }
+  }
+
+  &__tel {
+    padding: 12px 98px 12px 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: $border-radius;
+    margin-left: 16px;
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-xl) {
+      padding-right: 186px;
+      margin-left: 32px;
+    }
+  }
+
+  &__email {
+    padding: 12px 98px 12px 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: $border-radius;
+    margin-left: 16px;
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-xl) {
+      padding-right: 186px;
+      margin-left: 32px;
+    }
+  }
+
+  &__message {
+    padding: 12px 98px 82px 16px;
+    border: 1px solid #EAEAEA;
+    border-radius: $border-radius;
+    margin-left: 16px;
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-xl) {
+      padding-right: 186px;
+      margin-left: 32px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    margin-left: 16px;
+    width: 288px;
+    margin-bottom: 19px;
+    line-height: 17px;
+
+    @media (min-width: $screen-xl) {
+      width: 376px;
+      margin-left: 32px;
+    }
+
+    &_color {
+      color: #FF3E79;
+    }
+  }
+
+  &__submit {
+    position: relative;
+    left: 168px;
+    top: 0;
+
+    @media (min-width: $screen-xl) {
+      left: 272px;
+      top: 2px;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import 'variables.scss';
+
+.nav {
+  &_margin {
+    margin-bottom: 24px;
+    margin-left: 16px;
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 30px;
+      margin-left: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-left: 34px;
+      margin-bottom: 17px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    overflow: scroll;
+    white-space: nowrap;
+
+    @media (min-width: $screen-xl) {
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $text-gray;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition-duration: 0.2s;
+  }
+
+  &__link:hover {
+    text-shadow: 3px 3px 5px rgb(140, 137, 165);
+    transform: scale(1.1);
+    color: #a91fa0;
+  }
+
+  &__link_active {
+    border: 2px solid #B8FFEC;
+    background-color: $bg-color-white;
+    border-radius: $border-radius;
+  }
+}

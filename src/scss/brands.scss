@@ -1,0 +1,187 @@
+@import url(../../node_modules/swiper/swiper-bundle.css);
+@import 'variables.scss';
+
+.brands {
+  &__swiper {
+    margin: 16px 0 15px 16px;
+    padding-top: 1px;
+  }
+
+  &__card {
+    background: $bg-color-white;
+    min-width: 240px;
+    display: flex;
+    height: 72px;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    transition-duration: 200ms;
+
+    &:hover {
+      box-shadow:  0 0 10px 5px rgba(221, 221, 221, 1);
+      outline: 1px solid #F00;
+    }
+
+    @media (min-width: $screen-md) {
+      min-width: 224px;
+    }
+
+    @media (min-width: $screen-xl) {
+      min-width: 240px;
+    }
+  }
+
+  &__img {
+    width: 108px;
+  }
+
+  &__title {
+    color: $text-gray;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 16px;
+    margin: 0;
+    background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
+    border-top: 1px solid #D9FFF5;
+    margin-top: 20px;
+    letter-spacing: -0.4px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 32px;
+    }
+  }
+
+  &__img-apple {
+    width: 46px;
+  }
+
+  &__swiper {
+    @media (min-width: $screen-md) {
+      margin: 24px 24px 16px 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin: 24px 33px 16px 33px;
+    }
+  }
+}
+
+.swiper {
+  width: auto; 
+  height: 107px;
+  display: flex; 
+  @media (min-width: $screen-md) {
+    width: auto;
+    height: 166px;
+    overflow: hidden;
+  }
+} 
+
+.swiper-pagination {
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  background-color: #B5B6BC;
+}
+
+.brands-button {
+  display: none;
+}
+
+.swiper-slide {
+  height: 73px;
+  width: 240px;
+
+  @media (min-width: $screen-md) {
+    width: auto;
+  }
+}
+
+.brands_position {
+  display: flex;
+
+  @media (min-width: $screen-md) {
+    display: grid;
+    grid-template-columns: minmax(224px, 1fr) minmax(224px, 1fr) minmax(224px, 1fr);;
+    grid-template-rows: 73px 73px 73px;
+    column-gap: 24px;
+    row-gap: 16px;
+  }
+
+  @media (min-width: $screen-xl) {
+    grid-template-columns: minmax(240px, 1fr) minmax(240px, 1fr) minmax(240px, 1fr) minmax(240px, 1fr);
+    column-gap: 32px;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .swiper_open {
+    height: 350px;
+
+    @media (min-width: $screen-xl) {
+      height: 270px;
+    }
+  }
+
+  .brands-button {
+    border: none;
+    background-color: $bg-color;
+    transition-duration: 200ms;
+    display: block;
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    &__text {
+      display: flex;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #1B1C21;
+      margin-left: 22px;
+
+      @media (min-width: $screen-xl) {
+        margin-left: -5px;
+      }
+
+      &::before {
+        content: "";
+        background-image: url(../img/brands.svg);
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;    
+      }
+
+      &_open::before {
+        content: "";
+        background-image: url(../img/brands.svg);
+        width: 24px;
+        height: 24px;
+        margin-right: 10px; 
+        transform: rotate(180deg);   
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 31px;
+    }
+  }
+}

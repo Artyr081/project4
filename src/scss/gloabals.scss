@@ -1,0 +1,14 @@
+@import 'variables.scss';
+
+body {
+  font-family: $font-family-lakes;
+  background-color: $bg-color;
+  color: $text-black;    
+}
+
+a, 
+button,
+input,
+textarea {
+  transition-duration: 200ms;
+}

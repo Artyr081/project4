@@ -1,0 +1,211 @@
+@import 'variables.scss';
+
+.header {
+  background-color: $bg-color-white;
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+  border-bottom: 1px solid #D9FFF5;
+
+  @media (min-width: $screen-md) {
+    margin-right: 14px;
+  }
+
+  @media (min-width: $screen-xl) {
+    visibility: hidden;
+    height: 15px;
+  }
+
+  &__button {
+    display: flex;
+    align-self: center;
+    margin: 0 auto;
+    border: none;
+    background-color: $bg-color-white;
+    transition-duration: 0.2s;
+  }
+
+  &__href {
+    align-self: center;
+    margin: 0 auto;
+    transition-duration: 0.2s;
+  }
+
+  &__href:hover {
+    text-shadow: 3px 3px 5px rgb(140, 137, 165);
+    transform: scale(1.1);
+  }
+
+  &__button:hover {
+    text-shadow: 3px 3px 5px rgb(140, 137, 165);
+    transform: scale(1.1);
+  }
+
+  &__decor {
+    width: 2px;
+    height: 32px;
+    margin-top: 28px;
+  }
+
+  &__decor-mobile {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  &__button-mobile {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      display: block;
+    }
+  }
+
+  &__button-position {
+    @media (min-width: $screen-xl) {
+      display: flex;
+      gap: 8px;
+      background-color: inherit;
+      padding-top: 10px;
+      padding-right: 10px;
+      align-items: center;
+    }
+  }
+
+  &__button_text {
+    @media (min-width: $screen-xl) {
+      font-size: 16px;
+      line-height: 24px;
+      color: $text-black;
+    }
+  }
+}
+
+.main {
+
+  &_position {
+    @media (min-width: 1426px) {
+      margin-left: 307px;
+    }
+  }
+  
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      justify-content: space-between;
+      height: 74px;
+    }
+
+    &_menu {
+      display: none;
+
+      @media (min-width: $screen-xl) {
+        display: flex;
+        margin-top: 20px;
+        margin-right: 34px;
+        gap: 12px;
+    }
+    }
+
+    &_title {
+      display: flex;
+      font-size: 28px;
+      line-height: 40px;
+      padding-top: 3px;
+      letter-spacing: -0.2px;
+      margin: 21px 16px 23px 0;
+  
+      @media (min-width: $screen-md) {
+        margin-bottom: 31px;
+      }
+  
+      @media (min-width: $screen-xl) {
+        margin-top: 23px; 
+        margin-bottom: 0;
+      }
+  
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 40px;
+        background-color: #41F6D7;
+        position: relative;
+        margin-right: 12px;
+        border-radius: 6px;
+    
+        @media (min-width: $screen-md) {
+          margin-right: 21px;
+        }
+    
+        @media (min-width: $screen-xl) {
+          margin-right: 30px;
+          width: 3px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  .floy-1 {
+    float: right;
+    margin: 8px;
+    padding: 0;
+}
+
+.floy-2 {
+    float: right;
+    margin: 12px;
+    padding: 0;
+}
+
+.floy-3 {
+    float: right;
+    margin: 8px;
+    padding: 0;
+    margin-top: 28px;
+}
+
+.floy-4 {
+    float: right;
+    margin: 8px;
+    padding: 0;
+}
+
+.floy-5 {
+    float: right;
+    margin: 8px;
+    padding: 0;
+}
+
+.floy-6 {
+    float: right;
+    margin: 8px;
+    padding: 0;
+}
+
+.floy-9 {
+    float: left;
+    margin: 22px;
+    padding: 0;
+}
+
+.floy-8 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    margin-top: 28px;
+}
+
+.floy-7 {
+    float: left;
+    margin-left: 17px;
+    padding: 0;
+}
+}
