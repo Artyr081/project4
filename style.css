@@ -835,6 +835,9 @@ input,
 textarea {
   transition-duration: 200ms; }
 
+.scroll-none {
+  overflow: hidden; }
+
 @font-face {
   font-family: 'TT Lakes Regular';
   src: url(./fonts/TTLakes-Regular.eot);
@@ -889,11 +892,10 @@ textarea {
   .header__decor {
     width: 2px;
     height: 32px;
-    margin-top: 28px; }
-  .header__decor-mobile {
+    margin-top: 28px;
     display: none; }
     @media (min-width: 768px) {
-      .header__decor-mobile {
+      .header__decor {
         display: block; } }
   .header__button-mobile {
     display: none; }
@@ -1026,27 +1028,23 @@ textarea {
   font-weight: normal;
   font-style: normal; }
 
-.nav_margin {
-  margin-bottom: 24px;
-  margin-left: 16px; }
-  @media (min-width: 768px) {
-    .nav_margin {
-      margin-bottom: 30px;
-      margin-left: 24px; } }
-  @media (min-width: 1426px) {
-    .nav_margin {
-      margin-left: 34px;
-      margin-bottom: 17px; } }
-
 .nav__list {
   list-style: none;
   display: flex;
   overflow: scroll;
-  white-space: nowrap; }
+  white-space: nowrap;
+  margin-bottom: 24px;
+  margin-left: 16px; }
+  @media (min-width: 768px) {
+    .nav__list {
+      margin-bottom: 30px;
+      margin-left: 24px; } }
   @media (min-width: 1426px) {
     .nav__list {
       flex-wrap: wrap;
-      overflow: hidden; } }
+      overflow: hidden;
+      margin-left: 34px;
+      margin-bottom: 17px; } }
 
 .nav__link {
   display: block;
@@ -1103,14 +1101,10 @@ textarea {
     height: 327px; } }
 
 .info__container {
-  width: 288px; }
-  @media (min-width: 768px) {
-    .info__container {
-      width: auto; } }
+  width: auto; }
   @media (min-width: 1426px) {
     .info__container {
       display: block;
-      width: auto;
       margin-left: 24px; } }
 
 .info__text {
@@ -1206,7 +1200,7 @@ textarea {
       left: 0; } }
 
 .info__img {
-  width: 320px;
+  width: 100%;
   height: 176px; }
   @media (min-width: 768px) {
     .info__img_position {
@@ -1435,6 +1429,16 @@ textarea {
 .technic__swiper {
   margin: 16px 0 16px 16px;
   height: 195px; }
+  @media (min-width: 768px) {
+    .technic__swiper {
+      margin: 24px 24px 16px 24px;
+      height: 170px; } }
+  @media (min-width: 1426px) {
+    .technic__swiper {
+      margin: 24px 33px 16px 33px; } }
+  @media (min-width: 768px) {
+    .technic__swiper_open {
+      height: 350px; } }
 
 .technic__card {
   background: #FFFFFF;
@@ -1482,19 +1486,6 @@ textarea {
 
 .technic__img-apple {
   width: 46px; }
-
-@media (min-width: 768px) {
-  .technic__swiper {
-    margin: 24px 24px 16px 24px;
-    height: 170px; } }
-
-@media (min-width: 1426px) {
-  .technic__swiper {
-    margin: 24px 33px 16px 33px; } }
-
-@media (min-width: 768px) {
-  .technic__swiper_open {
-    height: 350px; } }
 
 .technic__button {
   position: absolute;
@@ -1586,12 +1577,12 @@ textarea {
       .price__card {
         flex-direction: row;
         height: 30px;
-        width: 700px;
+        width: 100%;
         justify-content: flex-start;
         border: none; } }
     @media (min-width: 1426px) {
       .price__card {
-        width: 1020px;
+        width: 100%;
         padding-left: 25px; } }
     .price__card:hover {
       box-shadow: 0 0 10px 5px #dddddd; }
@@ -1633,10 +1624,10 @@ textarea {
         color: #7E7E82;
         padding-top: 15px; }
         .price__text_color:first-child {
-          width: 365px; } }
+          width: 47.5vw; } }
     @media (min-width: 768px) and (min-width: 1426px) {
       .price__text_color:first-child {
-        width: 463px; } }
+        width: 33.5vw; } }
     .price__text_gray {
       display: block;
       font-size: 14px;
@@ -1656,7 +1647,7 @@ textarea {
       cursor: pointer; }
   .price_gap {
     gap: 16px;
-    width: auto; }
+    width: 100%; }
     @media (min-width: 768px) {
       .price_gap {
         display: flex;
@@ -1740,22 +1731,22 @@ textarea {
     .price .swiper-slide:last-child::after {
       display: none; }
   .one-column {
-    width: 364px; } }
+    width: 47.5vw; } }
   @media (min-width: 768px) and (min-width: 1426px) {
     .one-column {
-      width: 463px; } }
+      width: 33.5vw; } }
 
 @media (min-width: 768px) {
   .two-column {
-    width: 105px;
+    width: 13.5vw;
     padding-left: 6px; } }
   @media (min-width: 768px) and (min-width: 1426px) {
     .two-column {
-      width: 235px; } }
+      width: 16.5vw; } }
 
 @media (min-width: 768px) {
   .three-column {
-    width: 130px; }
+    width: 20vw; }
   .four-column {
     width: 119px;
     position: absolute;
@@ -1866,23 +1857,27 @@ textarea {
   top: 0;
   left: 0;
   z-index: 20;
-  box-shadow: -25px 0 50px 0 #000000; }
+  box-shadow: -25px 0 50px 0 #000000;
+  overflow-y: scroll;
+  position: fixed;
+  scrollbar-width: none; }
   @media (min-width: 360px) {
     .aside {
       width: 360px;
       padding: 0 10px; } }
   @media (min-width: 768px) {
     .aside {
-      height: 1024px; } }
+      height: 100vh; } }
   @media (min-width: 1426px) {
     .aside {
       display: block;
-      height: 1925px;
       width: 306px;
       box-shadow: none;
       z-index: 0; } }
   .aside_open {
-    display: block; }
+    display: block;
+    height: 100vh;
+    overflow: scroll; }
 
 .button_hover {
   padding: 0;
@@ -2106,18 +2101,19 @@ textarea {
 .feedback {
   display: none;
   width: 320px;
-  height: 676px;
+  height: 100vh;
   background-color: #FFFFFF;
   position: fixed;
   top: 0;
   right: 0;
   box-shadow: 25px 0 50px 0 #000000;
   position: absolute;
-  z-index: 30; }
+  z-index: 30;
+  overflow: scroll;
+  scrollbar-width: none; }
   @media (min-width: 1426px) {
     .feedback {
-      width: 440px;
-      min-height: 1927px; } }
+      width: 440px; } }
   .feedback_open {
     display: block; }
   .feedback__button {
@@ -2235,18 +2231,19 @@ textarea {
 .call {
   display: none;
   width: 320px;
-  height: 676px;
+  height: 100vh;
   background-color: #FFFFFF;
   position: fixed;
   top: 0;
   right: 0;
   box-shadow: 25px 0 50px 0 #000000;
   position: absolute;
-  z-index: 30; }
+  z-index: 30;
+  overflow: scroll;
+  scrollbar-width: none; }
   @media (min-width: 1426px) {
     .call {
-      width: 440px;
-      min-height: 1927px; } }
+      width: 440px; } }
   .call_open {
     display: block; }
   .call__button {
