@@ -1,9 +1,7 @@
 const info = document.querySelector('.info');
-
 const infoHeight = info.querySelector('.info_height');
 const infoBtn = info.querySelector('.info__button');
 const btnSpan = info.querySelector('.info__next');
-
 const text = info.querySelector('.info__text-mobile_adition');
 
 let btnspanText = 'Читать далее';

@@ -12,3 +12,7 @@ input,
 textarea {
   transition-duration: 200ms;
 }
+
+.scroll-none {
+  overflow: hidden;
+}

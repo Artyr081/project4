@@ -44,13 +44,13 @@
     @media (min-width: $screen-md) {
       flex-direction: row;
       height: 30px;
-      width: 700px;
+      width: 100%;
       justify-content: flex-start;
       border: none;
     }
 
     @media (min-width: $screen-xl) {
-      width: 1020px;
+      width: 100%;
       padding-left: 25px;
     }
 
@@ -113,12 +113,12 @@
         padding-top: 15px;
 
         &:first-child {
-           width: 365px;
+           width: 47.5vw;
 
-      @media (min-width: $screen-xl) {
-        width: 463px;
-      }
-    }
+           @media (min-width: $screen-xl) {
+            width: 33.5vw;
+          }
+        }
       }
     }
     
@@ -152,7 +152,7 @@
 
   &_gap {
     gap: 16px;
-    width: auto;
+    width: 100%;
 
     @media (min-width: $screen-md) {
       display: flex;
@@ -265,24 +265,24 @@
   }
 
   .one-column {
-    width: 364px;
+    width: 47.5vw;
 
     @media (min-width: $screen-xl) {
-      width: 463px;
+      width: 33.5vw;
     }
   }
 
   .two-column {
-    width: 105px;
+    width: 13.5vw;
     padding-left: 6px;
 
     @media (min-width: $screen-xl) {
-      width: 235px;
+      width: 16.5vw;
     }
   }
 
   .three-column {
-    width: 130px;
+    width: 20vw;
   }
 
   .four-column {

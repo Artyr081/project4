@@ -45,9 +45,6 @@
     width: 2px;
     height: 32px;
     margin-top: 28px;
-  }
-
-  &__decor-mobile {
     display: none;
 
     @media (min-width: $screen-md) {

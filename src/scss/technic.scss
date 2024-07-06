@@ -17,6 +17,21 @@
   &__swiper {
     margin: 16px 0 16px 16px;
     height: 195px;
+
+    @media (min-width: $screen-md) {
+      margin: 24px 24px 16px 24px;
+      height: 170px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin: 24px 33px 16px 33px;
+    }
+
+    &_open {
+      @media (min-width: $screen-md) {
+        height: 350px;
+      }
+    }
   }
 
   &__card {
@@ -74,23 +89,6 @@
 
   &__img-apple {
     width: 46px;
-  }
-
-  &__swiper {
-    @media (min-width: $screen-md) {
-      margin: 24px 24px 16px 24px;
-      height: 170px;
-    }
-
-    @media (min-width: $screen-xl) {
-      margin: 24px 33px 16px 33px;
-    }
-
-    &_open {
-      @media (min-width: $screen-md) {
-        height: 350px;
-      }
-    }
   }
 
   &__button {

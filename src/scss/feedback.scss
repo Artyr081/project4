@@ -3,7 +3,7 @@
 .feedback {
   display: none;
   width: 320px;
-  height: 676px;
+  height: 100vh;
   background-color: $bg-color-white;
   position: fixed;
   top: 0;
@@ -11,10 +11,11 @@
   box-shadow: 25px 0 50px 0 #000000;
   position: absolute;
   z-index: 30;
+  overflow: scroll;
+  scrollbar-width: none;
 
   @media (min-width: $screen-xl) {
     width: 440px;
-    min-height: 1927px;
   }
 
   &_open {

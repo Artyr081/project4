@@ -1,7 +1,12 @@
 @import 'variables.scss';
 
 .nav {
-  &_margin {
+
+  &__list {
+    list-style: none;
+    display: flex;
+    overflow: scroll;
+    white-space: nowrap;
     margin-bottom: 24px;
     margin-left: 16px;
 
@@ -11,20 +16,10 @@
     }
 
     @media (min-width: $screen-xl) {
-      margin-left: 34px;
-      margin-bottom: 17px;
-    }
-  }
-
-  &__list {
-    list-style: none;
-    display: flex;
-    overflow: scroll;
-    white-space: nowrap;
-
-    @media (min-width: $screen-xl) {
       flex-wrap: wrap;
       overflow: hidden;
+      margin-left: 34px;
+      margin-bottom: 17px;
     }
   }
 

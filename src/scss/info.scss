@@ -15,15 +15,10 @@
   }
 
   &__container {
-    width: 288px;
-
-    @media (min-width: $screen-md) {
-      width: auto;
-    }
+    width: auto;
 
     @media (min-width: $screen-xl) {
       display: block;
-      width: auto;
       margin-left: 24px;
     }
   }
@@ -138,7 +133,7 @@
   }
 
   &__img {
-    width: 320px;
+    width: 100%;
     height: 176px;
     
 
